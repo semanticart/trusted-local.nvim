@@ -7,7 +7,6 @@ return {
             desc = "Trusted-local for lua",
             pattern = "*",
             callback = function()
-                print(debug.getinfo(1).currentline)
                 local trusted_local = vim.fn.getcwd() ..
                                           "/.git/safe/../../.init.local.lua"
                 if vim.fn.filereadable(trusted_local) == 1 then
